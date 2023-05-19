@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/B_N_B.dart';
+
 class LoginIndividuals extends StatefulWidget {
   const LoginIndividuals({
     super.key,
@@ -207,6 +209,17 @@ class _LoginIndividualsState extends State<LoginIndividuals> {
                   ),
                 ),
                 GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) {
+                        return BNB(
+                          transitionAnimation: animation,
+                        );
+                      },
+                      transitionDuration: const Duration(milliseconds: 1300),
+                    ),
+                  ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 100, vertical: 20),
@@ -223,7 +236,7 @@ class _LoginIndividualsState extends State<LoginIndividuals> {
                       width: double.infinity,
                       height: 30,
                       decoration: BoxDecoration(
-                        color: Colors.teal,
+                        color: Theme.of(context).primaryColor,
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),

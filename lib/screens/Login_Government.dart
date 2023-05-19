@@ -223,7 +223,7 @@ class _LoginGovernmentState extends State<LoginGovernment> {
                       width: double.infinity,
                       height: 30,
                       decoration: BoxDecoration(
-                        color: Colors.teal,
+                        color: Theme.of(context).primaryColor,
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),

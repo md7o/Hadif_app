@@ -15,7 +15,7 @@ class TypePersonal extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text(
-            'هادف',
+            'واصل',
             style: TextStyle(
               color: Colors.white,
               fontSize: 30,
