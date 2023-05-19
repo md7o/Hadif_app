@@ -100,7 +100,7 @@ class _LoginIndividualsState extends State<LoginIndividuals> {
             builder: (context, child) {
               return SlideTransition(
                 position: Tween<Offset>(
-                  begin: const Offset(0, 1),
+                  begin: const Offset(0, 0.7),
                   end: const Offset(0, 0),
                 ).animate(
                   CurvedAnimation(
