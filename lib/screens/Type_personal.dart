@@ -31,6 +31,8 @@ class TypePersonal extends StatelessWidget {
               child: Column(
                 children: [
                   InkWell(
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
                     onTap: () => Navigator.push(
                       context,
                       PageRouteBuilder(
@@ -43,46 +45,53 @@ class TypePersonal extends StatelessWidget {
                       ),
                     ),
                     child: Container(
-                      width: 150,
-                      height: 160,
+                      width: 160,
+                      height: 170,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Theme.of(context).primaryColor,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.topLeft,
+                          colors: [
+                            Theme.of(context).primaryColor.withOpacity(.2),
+                            Theme.of(context).primaryColor
+                          ],
+                        ),
                       ),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Image.asset('images/S.png'),
+                          Opacity(
+                            opacity: 0.2,
+                            child: Image.asset(
+                              'images/squ.png',
                             ),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10),
-                                child: Text(
-                                  'أفراد',
-                                  style: GoogleFonts.cairo(
-                                    color: Colors.white,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  textAlign: TextAlign.end,
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: Container(
+                              width: double.infinity,
+                              child: Text(
+                                'الأفراد',
+                                style: GoogleFonts.cairo(
+                                  color: Colors.white,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
                                 ),
+                                textAlign: TextAlign.end,
                               ),
-                            ],
+                            ),
                           ),
                         ],
                       ),
                     ),
                   ),
                   const SizedBox(
-                    height: 50,
+                    height: 30,
                   ),
                   InkWell(
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
                     onTap: () => Navigator.push(
                       context,
                       PageRouteBuilder(
@@ -95,36 +104,42 @@ class TypePersonal extends StatelessWidget {
                       ),
                     ),
                     child: Container(
-                      width: 150,
-                      height: 160,
+                      width: 160,
+                      height: 170,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Theme.of(context).primaryColor),
+                        borderRadius: BorderRadius.circular(10),
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.topLeft,
+                          colors: [
+                            Theme.of(context).primaryColor.withOpacity(.2),
+                            Theme.of(context).primaryColor
+                          ],
+                        ),
+                      ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Image.asset('images/S.png'),
+                          Opacity(
+                            opacity: 0.2,
+                            child: Image.asset(
+                              'images/squ.png',
                             ),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10),
-                                child: Text(
-                                  'جهات',
-                                  style: GoogleFonts.cairo(
-                                    color: Colors.white,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  textAlign: TextAlign.end,
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: Container(
+                              width: double.infinity,
+                              child: const Text(
+                                'الجهات',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
                                 ),
+                                textAlign: TextAlign.end,
                               ),
-                            ],
+                            ),
                           ),
                         ],
                       ),

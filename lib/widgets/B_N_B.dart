@@ -34,7 +34,7 @@ class _BNBState extends State<BNB> {
     const HomePage(),
     const DestinationsGover(),
     const chatPage(),
-    const Setting(),
+    const SettingPage(),
   ];
 
   @override
@@ -44,29 +44,29 @@ class _BNBState extends State<BNB> {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
         color: Theme.of(context).primaryColor,
-        height: 60,
-        animationDuration: const Duration(milliseconds: 600),
+        height: 50,
+        animationDuration: const Duration(milliseconds: 800),
         onTap: navigatedBottomBar,
         items: const [
           Icon(
-            Icons.home_outlined,
+            Icons.home,
             color: Colors.white,
-            size: 35,
+            size: 25,
           ),
           Icon(
-            Icons.location_city_outlined,
+            Icons.location_city,
             color: Colors.white,
-            size: 35,
+            size: 25,
           ),
           Icon(
             Icons.chat,
             color: Colors.white,
-            size: 35,
+            size: 25,
           ),
           Icon(
-            Icons.settings_outlined,
+            Icons.person,
             color: Colors.white,
-            size: 35,
+            size: 25,
           ),
         ],
       ),

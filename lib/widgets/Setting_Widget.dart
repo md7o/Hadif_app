@@ -43,7 +43,6 @@ class modeWidget extends StatelessWidget {
             height: 45,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
               borderRadius: const BorderRadius.all(
                 Radius.circular(5),
               ),
@@ -53,114 +52,36 @@ class modeWidget extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
+                  Icon(
+                    Icons.arrow_back_ios_new,
+                    color: Colors.white,
+                    size: 20,
+                  ),
                   Row(
                     children: [
+                      Text(
+                        'معلومات الحساب',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.normal),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(
-                        Icons.person,
+                        Icons.person_outline,
                         color: Colors.white,
                         size: 25,
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        'Profile',
-                        style: GoogleFonts.josefinSans(
-                          textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.normal),
-                        ),
-                      ),
                     ],
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.white,
-                    size: 25,
                   ),
                 ],
               ),
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class sourcesWidget extends StatelessWidget {
-  const sourcesWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => Navigator.push(
-        context,
-        PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) {
-            return Sources();
-          },
-          transitionDuration: const Duration(milliseconds: 700),
-          transitionsBuilder: (context, animation, animationTime, child) {
-            const begin = Offset(0, 1);
-            const end = Offset.zero;
-            const curve = Curves.easeOutCubic;
-            var tween = Tween(begin: begin, end: end).chain(
-              CurveTween(curve: curve),
-            );
-            return SlideTransition(
-              position: animation.drive(tween),
-              child: child,
-            );
-          },
-        ),
-      ),
-      child: Container(
-        height: 45,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(5),
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Row(
-                children: [
-                  Icon(
-                    Icons.library_books_outlined,
-                    color: Colors.white,
-                    size: 25,
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'Sources',
-                    style: GoogleFonts.josefinSans(
-                      textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.normal),
-                    ),
-                  ),
-                ],
-              ),
-              Icon(
-                Icons.arrow_forward_ios_rounded,
-                color: Colors.white,
-                size: 25,
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }
@@ -197,7 +118,6 @@ class contantWidget extends StatelessWidget {
         height: 45,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
           borderRadius: const BorderRadius.all(
             Radius.circular(5),
           ),
@@ -207,32 +127,30 @@ class contantWidget extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: const [
+              Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.white,
+                size: 20,
+              ),
               Row(
                 children: [
+                  Text(
+                    'تواصل معنا',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.normal),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
                   Icon(
-                    Icons.phone,
+                    Icons.phone_outlined,
                     color: Colors.white,
                     size: 25,
                   ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'Connect with us',
-                    style: GoogleFonts.josefinSans(
-                      textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.normal),
-                    ),
-                  ),
                 ],
-              ),
-              Icon(
-                Icons.arrow_forward_ios_rounded,
-                color: Colors.white,
-                size: 25,
               ),
             ],
           ),
@@ -251,7 +169,6 @@ class shareWidget extends StatelessWidget {
       height: 45,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
         borderRadius: const BorderRadius.all(
           Radius.circular(5),
         ),
@@ -261,34 +178,105 @@ class shareWidget extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: const [
+            Icon(
+              Icons.arrow_back_ios_new,
+              color: Colors.white,
+              size: 20,
+            ),
             Row(
               children: [
+                Text(
+                  'نشر التطبيق',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.normal),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
                 Icon(
-                  Icons.share,
+                  Icons.share_outlined,
                   color: Colors.white,
                   size: 25,
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  'Share the app',
-                  style: GoogleFonts.josefinSans(
-                    textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal),
-                  ),
-                ),
               ],
             ),
-            Icon(
-              Icons.arrow_forward_ios_rounded,
-              color: Colors.white,
-              size: 25,
-            ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class sourcesWidget extends StatelessWidget {
+  const sourcesWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () => Navigator.push(
+        context,
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) {
+            return Sources();
+          },
+          transitionDuration: const Duration(milliseconds: 700),
+          transitionsBuilder: (context, animation, animationTime, child) {
+            const begin = Offset(0, 1);
+            const end = Offset.zero;
+            const curve = Curves.easeOutCubic;
+            var tween = Tween(begin: begin, end: end).chain(
+              CurveTween(curve: curve),
+            );
+            return SlideTransition(
+              position: animation.drive(tween),
+              child: child,
+            );
+          },
+        ),
+      ),
+      child: Container(
+        height: 45,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(5),
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Icon(
+                Icons.arrow_back_ios_new,
+                color: Color(0xFFB6B6B6),
+                size: 20,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'تسجيل الخروج',
+                    style: TextStyle(
+                        color: Color(0xFFB6B6B6),
+                        fontSize: 18,
+                        fontWeight: FontWeight.normal),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.logout_outlined,
+                    color: Color(0xFFB6B6B6),
+                    size: 25,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../models/category.dart';
+import '../pages/Search_Page.dart';
 import '../widgets/B_N_B.dart';
 import '../widgets/Slider_Code.dart';
 
@@ -20,11 +21,44 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          elevation: 0,
           backgroundColor: Colors.transparent,
-          title: const Center(
-            child: Text('الرئيسية'),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset(
+                'images/canva.png',
+                fit: BoxFit.contain,
+                height: 42,
+              ),
+              SizedBox(
+                height: 50,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Hero(
+                    tag: 'hlao',
+                    child: Material(
+                      elevation: 0,
+                      color: Colors.transparent,
+                      child: Column(
+                        children: [
+                          IconButton(
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => SearchPage(),
+                                ));
+                              },
+                              icon: const Icon(Icons.search))
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
+          automaticallyImplyLeading: false,
+          centerTitle: true,
+          elevation: 0,
         ),
         body: ListView(
           physics: const BouncingScrollPhysics(),

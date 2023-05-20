@@ -35,36 +35,23 @@ class _LoginIndividualsState extends State<LoginIndividuals> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        elevation: 0,
         backgroundColor: Colors.transparent,
-        title: AnimatedBuilder(
-          animation: widget.transitionAnimation,
-          builder: (context, child) {
-            return SlideTransition(
-              position: Tween<Offset>(
-                begin: const Offset(0, -0.3),
-                end: const Offset(0, 0),
-              ).animate(
-                CurvedAnimation(
-                  curve: const Interval(0, 1, curve: Curves.easeOutCubic),
-                  parent: widget.transitionAnimation,
-                ),
-              ),
-              child: child,
-            );
-          },
-          child: const Center(
-            child: Text(
-              'تسجيل دخول (أفراد)',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              'images/canva.png',
+              fit: BoxFit.contain,
+              height: 42,
             ),
-          ),
+            Container(
+                padding: const EdgeInsets.all(8.0),
+                child: const Text('تسجيل جديد'))
+          ],
         ),
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        elevation: 0,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

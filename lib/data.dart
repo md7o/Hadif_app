@@ -8,8 +8,8 @@ final data = {
     id: '1',
     items: const [
       Roller(
-        name: 'جامعات',
-        imageUrl: "images/S.png",
+        name: 'وزارات',
+        imageUrl: "images/squ.png",
         spinName: 'SpinWheel',
       ),
     ],
@@ -18,8 +18,8 @@ final data = {
     id: '2',
     items: const [
       Roller(
-        name: 'مستشفيات',
-        imageUrl: "images/JapanC.png",
+        name: 'جامعات',
+        imageUrl: "images/squ.png",
         spinName: 'c--',
       ),
     ],
@@ -29,7 +29,7 @@ final data = {
     items: const [
       Roller(
         name: 'مؤسسات',
-        imageUrl: "images/S.png",
+        imageUrl: "images/squ.png",
         spinName: 'c++',
       ),
     ],
@@ -39,7 +39,7 @@ final data = {
     items: const [
       Roller(
         name: 'هيئات',
-        imageUrl: "images/S.png",
+        imageUrl: "images/squ.png",
         spinName: 'c++',
       ),
     ],
@@ -48,8 +48,18 @@ final data = {
     id: '4',
     items: const [
       Roller(
-        name: 'وزارات',
-        imageUrl: "images/S.png",
+        name: 'مستشفيات',
+        imageUrl: "images/squ.png",
+        spinName: 'c++',
+      ),
+    ],
+  ),
+  Category(
+    id: '4',
+    items: const [
+      Roller(
+        name: 'شركات',
+        imageUrl: "images/squ.png",
         spinName: 'c++',
       ),
     ],

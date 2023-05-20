@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+import '../screens/Media_Center.dart';
+
 class SliderCode extends StatelessWidget {
   const SliderCode({super.key});
 
@@ -273,18 +275,27 @@ class SliderCode4 extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 10,
-                ),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Icon(
-                    Icons.more_horiz,
-                    color: Colors.white,
-                    size: 35,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MediaCenter()),
+                  );
+                },
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10,
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Theme.of(context).primaryColor,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white,
+                      size: 35,
+                    ),
                   ),
                 ),
               ),

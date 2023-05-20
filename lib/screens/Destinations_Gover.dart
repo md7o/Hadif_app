@@ -10,8 +10,23 @@ class DestinationsGover extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor,
-        title: const Text('LuckyRoller'),
+        backgroundColor: Colors.transparent,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              'images/canva.png',
+              fit: BoxFit.contain,
+              height: 42,
+            ),
+            Container(
+                padding: const EdgeInsets.all(8.0),
+                child: const Icon(Icons.notifications))
+          ],
+        ),
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        elevation: 0,
       ),
       body: GridView(
         padding: const EdgeInsets.all(25),
@@ -37,25 +52,40 @@ class DestinationsGover extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Theme.of(context).primaryColor,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft,
+                            colors: [
+                              Theme.of(context).primaryColor.withOpacity(.2),
+                              Theme.of(context).primaryColor
+                            ],
+                          ),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             if (roll.imageUrl.isNotEmpty)
-                              Image.asset(
-                                roll.imageUrl,
-                                width: 90,
+                              Opacity(
+                                opacity: 0.2,
+                                child: Image.asset(
+                                  roll.imageUrl,
+                                ),
                               ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Text(
-                              roll.name,
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
+                              child: Container(
+                                width: double.infinity,
+                                child: Text(
+                                  roll.name,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  textAlign: TextAlign.end,
+                                ),
+                              ),
                             ),
                           ],
                         ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/B_N_B.dart';
+
 class LoginGovernment extends StatefulWidget {
   const LoginGovernment({
     super.key,
@@ -33,36 +35,23 @@ class _LoginGovernmentState extends State<LoginGovernment> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        elevation: 0,
         backgroundColor: Colors.transparent,
-        title: AnimatedBuilder(
-          animation: widget.transitionAnimation,
-          builder: (context, child) {
-            return SlideTransition(
-              position: Tween<Offset>(
-                begin: const Offset(0, -0.3),
-                end: const Offset(0, 0),
-              ).animate(
-                CurvedAnimation(
-                  curve: const Interval(0, 1, curve: Curves.easeOutCubic),
-                  parent: widget.transitionAnimation,
-                ),
-              ),
-              child: child,
-            );
-          },
-          child: const Center(
-            child: Text(
-              'تسجيل دخول (جهات)',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              'images/canva.png',
+              fit: BoxFit.contain,
+              height: 42,
             ),
-          ),
+            Container(
+                padding: const EdgeInsets.all(8.0),
+                child: const Text('تسجيل جديد'))
+          ],
         ),
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        elevation: 0,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +73,7 @@ class _LoginGovernmentState extends State<LoginGovernment> {
               );
             },
             child: const Text(
-              'مرحبا بك في هادف (جهات)',
+              'رحبا بك في هادف الجهات',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 25,
@@ -207,6 +196,17 @@ class _LoginGovernmentState extends State<LoginGovernment> {
                   ),
                 ),
                 GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) {
+                        return BNB(
+                          transitionAnimation: animation,
+                        );
+                      },
+                      transitionDuration: const Duration(milliseconds: 1300),
+                    ),
+                  ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 100, vertical: 20),
