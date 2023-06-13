@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
       home: const chatPage(),
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: const Color(0xFF203E75),
-        scaffoldBackgroundColor: const Color(0xFF121218),
-        textTheme: GoogleFonts.cairoTextTheme(),
-      ),
+          primaryColor: const Color(0xFF203E75),
+          scaffoldBackgroundColor: const Color(0xFF121218),
+          textTheme: GoogleFonts.cairoTextTheme(),
+          useMaterial3: true),
       debugShowCheckedModeBanner: false,
     );
   }
