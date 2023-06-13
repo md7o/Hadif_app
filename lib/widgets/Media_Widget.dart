@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../screens/Voice_Page.dart';
+import '../Pages/Voice_Page.dart';
 
 class MediaWidget extends StatelessWidget {
   const MediaWidget({super.key});

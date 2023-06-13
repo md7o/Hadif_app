@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hadif_app/screens/Login_Government.dart';
+import 'package:hadif_app/Pages/Login_Government.dart';
 
 import 'Login_Individuals.dart';
 
@@ -14,17 +14,7 @@ class TypePersonal extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'واصل',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          // SizedBox(
-          //   height: 30,
-          // ),
+          Image.asset('imgaes/logo.png'),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 60),
             child: Center(

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../widgets/Setting_Widget.dart';
+import '../Setting_Widget.dart';
 
-class SettingPage extends StatelessWidget {
-  const SettingPage({super.key});
+class Profile extends StatelessWidget {
+  const Profile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class SettingPage extends StatelessWidget {
               width: 140,
               height: 140,
               child: CircleAvatar(
-                backgroundColor: Theme.of(context).primaryColor,
+                backgroundColor: Colors.blue,
                 child: Image.asset(
                   'images/man.png',
                 ),

@@ -103,7 +103,12 @@ class _chatPageState extends State<chatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('imam university'),
+        title: const Text(
+          'bot replay',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Column(

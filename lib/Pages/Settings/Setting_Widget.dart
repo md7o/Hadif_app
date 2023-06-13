@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../pages/Connection.dart';
-import '../pages/Profile.dart';
-import '../pages/Sources.dart';
+import 'categories/Connection.dart';
+import 'categories/Profile.dart';
+import 'categories/Sources.dart';
 
 class modeWidget extends StatelessWidget {
   const modeWidget({super.key});

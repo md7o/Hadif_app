@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../screens/Media_Center.dart';
+import '../Pages/Media_Center.dart';
 
 class SliderCode extends StatelessWidget {
   const SliderCode({super.key});
