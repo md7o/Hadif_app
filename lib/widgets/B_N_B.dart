@@ -2,10 +2,10 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import '../screens/Chat_Page.dart';
-import '../screens/Destinations_Gover.dart';
-import '../screens/Home_Page.dart';
-import '../screens/Setting_Page.dart';
+import '../Pages/Chat_Page.dart';
+import '../Pages/Destinations_Gover.dart';
+import '../Pages/Home_Page.dart';
+import '../Pages/Settings/Setting_Page.dart';
 
 class BNB extends StatefulWidget {
   const BNB({

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../widgets/Setting_Widget.dart';
-
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
@@ -39,64 +37,69 @@ class Profile extends StatelessWidget {
               width: 140,
               height: 140,
               child: CircleAvatar(
-                backgroundColor: Colors.blue,
+                backgroundColor: Theme.of(context).primaryColor,
                 child: Image.asset(
                   'images/man.png',
                 ),
               ),
             ),
           ),
-          const SizedBox(
-            height: 15,
-          ),
-          const Text(
-            'محمد أيمن',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-            ),
-          ),
-          const Text(
-            'رقم الهوية: 11223344',
-            style: TextStyle(
-              color: Color.fromARGB(142, 255, 255, 255),
-              fontSize: 16,
-            ),
-          ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 SizedBox(
                   height: 40,
                 ),
-                const modeWidget(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Text(
+                    'رقم الهاتف: 0551227021',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
                 const Divider(
                   indent: 30,
                   endIndent: 30,
                   thickness: 1,
                   color: Color(0x73FFFFFF),
                 ),
-                const contantWidget(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Text(
+                    'md7ohe@gmail.com  :الإيميل',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
                 const Divider(
                   indent: 30,
                   endIndent: 30,
                   thickness: 1,
                   color: Color(0x73FFFFFF),
                 ),
-                InkWell(
-                    onTap: () async {
-                      await Share.share(
-                          'World Cars includes many famous cars from 4 countries, America - Japan - Germany - South Korea. https://play.google.com/store/apps/details?id=com.world.cars.worldcars');
-                    },
-                    child: const shareWidget()),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Text(
+                    'الجنس:  ذكر',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
                 const Divider(
                   indent: 30,
                   endIndent: 30,
                   thickness: 1,
                   color: Color(0x73FFFFFF),
                 ),
-                const sourcesWidget(),
               ],
             ),
           ),

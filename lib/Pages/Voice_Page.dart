@@ -45,19 +45,19 @@ class VoicePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Padding(
+                  const Padding(
                     padding: const EdgeInsets.only(right: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Image.network(
-                          'https://media2.giphy.com/media/McsDYx2ihXzztTFMap/200w.gif?cid=82a1493b06sil3punfz6xx83ulilhtxuh5lxddnsg363nvwg&ep=v1_gifs_related&rid=200w.gif&ct=s',
-                          scale: 10,
+                        Icon(
+                          Icons.circle,
+                          color: Colors.red,
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 10,
                         ),
-                        const Text(
+                        Text(
                           'مباشر',
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
@@ -75,10 +75,20 @@ class VoicePage extends StatelessWidget {
                             'تعديل على الفصول في السنوات القادمة',
                             style: TextStyle(color: Colors.white, fontSize: 17),
                           ),
-                          const Text(
-                            'وزير التعليم: يوسف بن عبداللَّه البنيان',
-                            style: TextStyle(
-                                color: Color(0xFFC8C8C8), fontSize: 15),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'وزير التعليم: يوسف بن عبداللَّه البنيان',
+                                style: TextStyle(
+                                    color: Color(0xFFC8C8C8), fontSize: 15),
+                              ),
+                              Icon(
+                                Icons.mic,
+                                color: Colors.white,
+                                size: 25,
+                              ),
+                            ],
                           ),
                           const SizedBox(height: 30),
                           const Text(

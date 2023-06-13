@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import '../models/category.dart';
-import '../pages/Search_Page.dart';
-import '../widgets/B_N_B.dart';
+import 'package:hadif_app/Pages/Search_Page.dart';
 import '../widgets/Slider_Code.dart';
 
 class HomePage extends StatefulWidget {

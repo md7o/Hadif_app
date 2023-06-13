@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
-
-import '../widgets/Setting_Widget.dart';
+import 'Setting_Widget.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({super.key});
@@ -32,12 +31,12 @@ class SettingPage extends StatelessWidget {
       body: Column(
         children: [
           const SizedBox(
-            height: 50,
+            height: 30,
           ),
           Center(
             child: Container(
-              width: 140,
-              height: 140,
+              width: 130,
+              height: 100,
               child: CircleAvatar(
                 backgroundColor: Theme.of(context).primaryColor,
                 child: Image.asset(
@@ -47,20 +46,20 @@ class SettingPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           const Text(
             'محمد أيمن',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 20,
+              fontSize: 18,
             ),
           ),
           const Text(
             'رقم الهوية: 11223344',
             style: TextStyle(
               color: Color.fromARGB(142, 255, 255, 255),
-              fontSize: 16,
+              fontSize: 15,
             ),
           ),
           Padding(
@@ -68,9 +67,23 @@ class SettingPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 40,
+                  height: 25,
                 ),
                 const modeWidget(),
+                const Divider(
+                  indent: 30,
+                  endIndent: 30,
+                  thickness: 1,
+                  color: Color(0x73FFFFFF),
+                ),
+                CvWidget(),
+                const Divider(
+                  indent: 30,
+                  endIndent: 30,
+                  thickness: 1,
+                  color: Color(0x73FFFFFF),
+                ),
+                Follow(),
                 const Divider(
                   indent: 30,
                   endIndent: 30,
