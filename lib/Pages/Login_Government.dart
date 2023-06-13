@@ -34,25 +34,6 @@ class _LoginGovernmentState extends State<LoginGovernment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset(
-              'images/canva.png',
-              fit: BoxFit.contain,
-              height: 42,
-            ),
-            Container(
-                padding: const EdgeInsets.all(8.0),
-                child: const Text('تسجيل جديد'))
-          ],
-        ),
-        automaticallyImplyLeading: false,
-        centerTitle: true,
-        elevation: 0,
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -72,8 +53,32 @@ class _LoginGovernmentState extends State<LoginGovernment> {
                 child: child,
               );
             },
+            child: Image.asset(
+              'images/canva.png',
+              scale: 30,
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          AnimatedBuilder(
+            animation: widget.transitionAnimation,
+            builder: (context, child) {
+              return SlideTransition(
+                position: Tween<Offset>(
+                  begin: const Offset(0, -1),
+                  end: const Offset(0, 0),
+                ).animate(
+                  CurvedAnimation(
+                    curve: const Interval(0, 1, curve: Curves.easeOutCubic),
+                    parent: widget.transitionAnimation,
+                  ),
+                ),
+                child: child,
+              );
+            },
             child: const Text(
-              'رحبا بك في هادف الجهات',
+              'مرحبا بك في واصل الجهات',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 25,

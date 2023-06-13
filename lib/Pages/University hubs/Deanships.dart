@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/Club_Widget.dart';
+import '../../widgets/DeanshipsWidget.dart';
 
-class SaudClub extends StatelessWidget {
-  const SaudClub({super.key});
+class DeanshipsPage extends StatelessWidget {
+  const DeanshipsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,20 +27,19 @@ class SaudClub extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
       ),
-      body: const Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 20),
-            child: Center(
-              child: Text(
-                'نوادي جامعة الملك سعود',
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-            ),
-          ),
-          SizedBox(height: 10),
-          ClubWidget(),
-          SizedBox(height: 10),
+      body: GridView(
+        padding: const EdgeInsets.all(25),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          childAspectRatio: 1 / 1,
+          mainAxisSpacing: 15,
+          crossAxisSpacing: 15,
+          crossAxisCount: 2,
+        ),
+        children: const [
+          DeanshipsWidget1(),
+          DeanshipsWidget2(),
+          DeanshipsWidget3(),
+          DeanshipsWidget4(),
         ],
       ),
     );

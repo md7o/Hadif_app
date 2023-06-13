@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hadif_app/data.dart';
 
 import '../models/Gover.dart';
-import 'University_Page.dart';
+import 'University hubs/University_Page.dart';
 
 class DestinationsGover extends StatelessWidget {
   const DestinationsGover({super.key});
@@ -41,13 +41,20 @@ class DestinationsGover extends StatelessWidget {
           for (final category in data)
             Row(
               children: [
-                for (Roller roll in (category.items))
+                for (Gov roll in (category.items))
                   Expanded(
                     child: InkWell(
                       onTap: () => Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => UniversityPage(),
+                        PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) {
+                            return UniversityPage(
+                              transitionAnimation: animation,
+                            );
+                          },
+                          transitionDuration:
+                              const Duration(milliseconds: 1300),
                         ),
                       ),
                       child: Container(

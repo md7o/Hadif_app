@@ -9,8 +9,8 @@ class SliderCode extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(
+        const Padding(
+          padding: EdgeInsets.symmetric(
             horizontal: 10,
           ),
           child: Row(
@@ -20,33 +20,23 @@ class SliderCode extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                   horizontal: 10,
                 ),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Icon(
-                    Icons.more_horiz,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+                child: Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                  size: 35,
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(10)),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text(
-                    'الأخبار الوطنية',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  'الأخبار الوطنية',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         CarouselSlider(
@@ -94,8 +84,8 @@ class SliderCode2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(
+        const Padding(
+          padding: EdgeInsets.symmetric(
             horizontal: 10,
           ),
           child: Row(
@@ -105,33 +95,23 @@ class SliderCode2 extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                   horizontal: 10,
                 ),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Icon(
-                    Icons.more_horiz,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+                child: Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                  size: 35,
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(10)),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text(
-                    'الدورات التدريبية',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  'الدورات التدريبية',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         CarouselSlider(
@@ -179,8 +159,8 @@ class SliderCode3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(
+        const Padding(
+          padding: EdgeInsets.symmetric(
             horizontal: 10,
           ),
           child: Row(
@@ -190,33 +170,23 @@ class SliderCode3 extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                   horizontal: 10,
                 ),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Icon(
-                    Icons.more_horiz,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+                child: Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                  size: 35,
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(10)),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text(
-                    'الوظائف الشاغرة',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  'الوظائف الشاغرة',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         CarouselSlider(
@@ -278,38 +248,28 @@ class SliderCode4 extends StatelessWidget {
                         builder: (context) => const MediaCenter()),
                   );
                 },
-                child: Padding(
+                child: const Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: 10,
                   ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Theme.of(context).primaryColor,
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Icon(
-                      Icons.more_horiz,
-                      color: Colors.white,
-                      size: 35,
-                    ),
+                  child: Icon(
+                    Icons.more_horiz,
+                    color: Colors.white,
+                    size: 35,
                   ),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(10)),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text(
-                    'المركز الإعلامي',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  'المركز الإعلامي',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         CarouselSlider(

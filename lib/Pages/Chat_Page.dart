@@ -13,7 +13,7 @@ class chatPage extends StatefulWidget {
 }
 
 class _chatPageState extends State<chatPage> {
-  final List<NickName> NickNames = [];
+  final List<ChatText> NickNames = [];
 
   var receivedMessage = '';
   var automatedReply = '';
@@ -35,7 +35,7 @@ class _chatPageState extends State<chatPage> {
   }
 
   void _addNewNickName(String txUser) {
-    final AddTx = NickName(
+    final AddTx = ChatText(
         name: txUser, id: DateTime.now().toString(), date: DateTime.now());
     setState(() {
       NickNames.add(AddTx);
