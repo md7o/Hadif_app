@@ -29,34 +29,34 @@ class MediaWidget extends StatelessWidget {
                   topLeft: Radius.circular(10),
                 ),
               ),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 10),
+                    padding: EdgeInsets.only(right: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Image.network(
-                          'https://media2.giphy.com/media/McsDYx2ihXzztTFMap/200w.gif?cid=82a1493b06sil3punfz6xx83ulilhtxuh5lxddnsg363nvwg&ep=v1_gifs_related&rid=200w.gif&ct=s',
-                          scale: 10,
+                        Icon(
+                          Icons.circle,
+                          color: Colors.red,
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 10,
                         ),
-                        const Text(
+                        Text(
                           'مباشر',
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                       ],
                     ),
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                     child: Text(
-                      'تعديل على الفصول في السنوات القادمة',
-                      style: TextStyle(color: Colors.white, fontSize: 17),
+                      'وزارة التعليم: تعديل على الفصول في السنوات القادمة',
+                      style: TextStyle(color: Colors.white, fontSize: 15),
                     ),
                   ),
                 ],
@@ -104,7 +104,7 @@ class MediaWidget extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    'وزير التعليم: يوسف بن عبداللَّه البنيان',
+                    'يوسف بن عبدالله البنيان',
                     style: TextStyle(color: Colors.white, fontSize: 15),
                     textAlign: TextAlign.right,
                   ),
@@ -172,7 +172,7 @@ class MediaWidget2 extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   child: Text(
-                    'العنوان',
+                    'جامعة الملك سعود: الهاكثون النسخة الثالثة',
                     style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                 ),
@@ -220,7 +220,7 @@ class MediaWidget2 extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    'إسم المضيف',
+                    'بدران بن عبد الرحمن العمر',
                     style: TextStyle(color: Colors.white, fontSize: 15),
                     textAlign: TextAlign.right,
                   ),

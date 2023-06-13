@@ -95,21 +95,31 @@ class _chatPageState extends State<chatPage> {
 
   List<String> automatedReplies = [
     'كيف يمكنني مساعدتك',
-    'يجب التسجيل من خلال موقع أبشر',
-    'يوجد حظر 30 يوم ولا يمكن فعل شيئ'
+    'هناك اربع مسارات في برنامج خادم  الحرمين الشريفين للابتعاث',
+    'الأول مسار الرواد الثاني البحث والتطوير الثالث مسار إمداد الرابع مسار واعد',
+    'تستطيع التقديم على مسار الرواد!',
   ];
   int replyIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'bot replay',
-          style: TextStyle(
-            color: Colors.white,
-          ),
+        backgroundColor: Colors.transparent,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              'images/canva.png',
+              fit: BoxFit.contain,
+              height: 42,
+            ),
+            Container(
+                padding: const EdgeInsets.all(8.0), child: Text('المحادثة'))
+          ],
         ),
-        backgroundColor: Theme.of(context).primaryColor,
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        elevation: 0,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,

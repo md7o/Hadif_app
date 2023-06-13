@@ -1,22 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hadif_app/Pages/Login_Government.dart';
-
+import 'Login_Government.dart';
 import 'Login_Individuals.dart';
 
-class TypePersonal extends StatelessWidget {
+class TypePersonal extends StatefulWidget {
   const TypePersonal({super.key});
+
+  @override
+  State<TypePersonal> createState() => _TypePersonalState();
+}
+
+class _TypePersonalState extends State<TypePersonal> {
+  bool _showText = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _delayedDisplay();
+  }
+
+  void _delayedDisplay() {
+    Future.delayed(Duration(seconds: 2), () {
+      setState(() {
+        _showText = true;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF121218),
+      backgroundColor: const Color(0xFF121218),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('imgaes/logo.png'),
+          Image.asset(
+            'images/canva.png',
+            scale: 30,
+          ),
+          Center(
+            child: _showText ? Text('Delayed Text') : SizedBox(),
+          ),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 60),
+            padding: const EdgeInsets.symmetric(vertical: 60),
             child: Center(
               child: Column(
                 children: [
@@ -58,7 +84,7 @@ class TypePersonal extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
                             child: Container(
                               width: double.infinity,
                               child: Text(

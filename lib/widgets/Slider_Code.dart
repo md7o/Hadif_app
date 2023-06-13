@@ -1,6 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
 import '../Pages/Media_Center.dart';
 
 class SliderCode extends StatelessWidget {
@@ -62,10 +61,9 @@ class SliderCode extends StatelessWidget {
             aspectRatio: 16 / 9,
           ),
           items: [
-            'images/JapanC.png',
-            'images/KoreaC.png',
-            'images/AmericaC.png',
-            'images/GermanyC.png'
+            'images/elan1.jpg',
+            'images/elan2.jpg',
+            'images/elan3.jpg',
           ].map((i) {
             return Builder(
               builder: (BuildContext context) {
@@ -77,7 +75,7 @@ class SliderCode extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)),
                   child: Image.asset(
                     i,
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                   ),
                 );
               },
@@ -148,10 +146,9 @@ class SliderCode2 extends StatelessWidget {
             aspectRatio: 16 / 9,
           ),
           items: [
-            'images/JapanC.png',
-            'images/KoreaC.png',
-            'images/AmericaC.png',
-            'images/GermanyC.png'
+            'images/boss1.jpg',
+            'images/boss2.jpg',
+            'images/boss3.jpeg',
           ].map((i) {
             return Builder(
               builder: (BuildContext context) {
@@ -163,7 +160,7 @@ class SliderCode2 extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)),
                   child: Image.asset(
                     i,
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                   ),
                 );
               },
@@ -234,10 +231,8 @@ class SliderCode3 extends StatelessWidget {
             aspectRatio: 16 / 9,
           ),
           items: [
-            'images/JapanC.png',
-            'images/KoreaC.png',
-            'images/AmericaC.png',
-            'images/GermanyC.png'
+            'images/jobs1.jpg',
+            'images/jobs2.jpg',
           ].map((i) {
             return Builder(
               builder: (BuildContext context) {
@@ -249,7 +244,7 @@ class SliderCode3 extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)),
                   child: Image.asset(
                     i,
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                   ),
                 );
               },
@@ -329,10 +324,7 @@ class SliderCode4 extends StatelessWidget {
             aspectRatio: 16 / 9,
           ),
           items: [
-            'images/JapanC.png',
-            'images/KoreaC.png',
-            'images/AmericaC.png',
-            'images/GermanyC.png'
+            'images/jobs (2).jpeg',
           ].map((i) {
             return Builder(
               builder: (BuildContext context) {
@@ -344,7 +336,7 @@ class SliderCode4 extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)),
                   child: Image.asset(
                     i,
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                   ),
                 );
               },

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import 'models/Gover.dart';
 import 'models/category.dart';
 
@@ -61,6 +59,62 @@ final data = {
         name: 'شركات',
         imageUrl: "images/squ.png",
         spinName: 'c++',
+      ),
+    ],
+  ),
+};
+final univer = {
+  Category2(
+    id: '1',
+    saud: const [
+      University(
+        name: 'جامعة الإمام',
+        imageUrl: "images/squ.png",
+      ),
+    ],
+  ),
+  Category2(
+    id: '2',
+    saud: const [
+      University(
+        name: 'جامعة الملك سعود',
+        imageUrl: "images/squ.png",
+      ),
+    ],
+  ),
+  Category2(
+    id: '3',
+    saud: const [
+      University(
+        name: 'الجامعة السعودية الإلكترونية',
+        imageUrl: "images/squ.png",
+      ),
+    ],
+  ),
+  Category2(
+    id: '4',
+    saud: const [
+      University(
+        name: 'الجامعة العربية المفتوحة',
+        imageUrl: "images/squ.png",
+      ),
+    ],
+  ),
+  Category2(
+    id: '5',
+    saud: const [
+      University(
+        name: 'جامعة طيبة',
+        imageUrl: "images/squ.png",
+      ),
+    ],
+  ),
+  Category2(
+    id: '6',
+    saud: const [
+      University(
+        name: 'جامعة أم القرى',
+        imageUrl: "images/squ.png",
       ),
     ],
   ),

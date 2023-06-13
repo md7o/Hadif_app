@@ -12,6 +12,16 @@ class Category {
   });
 }
 
+class Category2 {
+  final String id;
+  final List<University> saud;
+
+  Category2({
+    required this.id,
+    required this.saud,
+  });
+}
+
 class NickName {
   final String id;
   final String name;

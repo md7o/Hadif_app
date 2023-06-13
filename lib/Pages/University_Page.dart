@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hadif_app/data.dart';
+import 'package:hadif_app/models/Gover.dart';
 
-import '../models/Gover.dart';
-import 'University_Page.dart';
+import '../widgets/Club_Widget.dart';
+import 'Saud_Club.dart';
 
-class DestinationsGover extends StatelessWidget {
-  const DestinationsGover({super.key});
+class UniversityPage extends StatelessWidget {
+  const UniversityPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,16 +39,16 @@ class DestinationsGover extends StatelessWidget {
           crossAxisCount: 2,
         ),
         children: [
-          for (final category in data)
+          for (final category2 in univer)
             Row(
               children: [
-                for (Roller roll in (category.items))
+                for (University roll in (category2.saud))
                   Expanded(
                     child: InkWell(
                       onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => UniversityPage(),
+                          builder: (context) => SaudClub(),
                         ),
                       ),
                       child: Container(
@@ -81,7 +82,7 @@ class DestinationsGover extends StatelessWidget {
                                   roll.name,
                                   style: const TextStyle(
                                     color: Colors.white,
-                                    fontSize: 30,
+                                    fontSize: 17,
                                     fontWeight: FontWeight.bold,
                                   ),
                                   textAlign: TextAlign.end,

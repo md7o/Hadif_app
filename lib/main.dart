@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hadif_app/Pages/Chat_Page.dart';
-import 'package:hadif_app/Pages/Type_personal.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hadif_app/widgets/B_N_B.dart';
-import 'Pages/Home_Page.dart';
+import 'Pages/Type_personal.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,10 +15,10 @@ class MyApp extends StatelessWidget {
       home: const TypePersonal(),
       title: 'Flutter Demo',
       theme: ThemeData(
-          primaryColor: const Color(0xFF203E75),
-          scaffoldBackgroundColor: const Color(0xFF121218),
-          textTheme: GoogleFonts.cairoTextTheme(),
-          useMaterial3: true),
+        primaryColor: const Color(0xFF203E75),
+        scaffoldBackgroundColor: const Color(0xFF121218),
+        textTheme: GoogleFonts.cairoTextTheme(),
+      ),
       debugShowCheckedModeBanner: false,
     );
   }

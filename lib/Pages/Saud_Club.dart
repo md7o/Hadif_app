@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/Media_Widget.dart';
+import '../widgets/Club_Widget.dart';
 
-class MediaCenter extends StatefulWidget {
-  const MediaCenter({super.key});
+class SaudClub extends StatelessWidget {
+  const SaudClub({super.key});
 
-  @override
-  State<MediaCenter> createState() => _MediaCenterState();
-}
-
-class _MediaCenterState extends State<MediaCenter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,15 +33,15 @@ class _MediaCenterState extends State<MediaCenter> {
             padding: EdgeInsets.symmetric(vertical: 20),
             child: Center(
               child: Text(
-                'المساحات الصوتية',
+                'نوادي جامعة الملك سعود',
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
           ),
           SizedBox(height: 10),
-          MediaWidget(),
-          SizedBox(height: 20),
-          MediaWidget2()
+          ClubWidget(),
+          SizedBox(height: 10),
+          ClubWidget2()
         ],
       ),
     );
