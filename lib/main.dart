@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           primaryColor: const Color(0xFF203E75),
           scaffoldBackgroundColor: const Color(0xFF121218),
           textTheme: GoogleFonts.cairoTextTheme(),
-          useMaterial3: true),
+          useMaterial3: false),
       debugShowCheckedModeBanner: false,
     );
   }
